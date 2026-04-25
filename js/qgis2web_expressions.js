@@ -3,14 +3,8 @@
 // Color
 
 // Conditionals
-function fnc_coalesce(values, context) {
-    for (i = 0; i < values.length; i++) {
-        if (values[i] !== null) {
-            return values[i];
-        }
-        
-    }
-    return 'ERROR';
+function fnc_to_int(values, context) {
+    return parseInt(values[0]) || 0;
 };
 
 // Conversions
@@ -160,7 +154,7 @@ function fnc_to_real(values, context) {
 };
 
 function fnc_to_string(values, context) {
-    return false;
+    return String(values[0]);
 };
 
 function fnc_to_datetime(values, context) {
